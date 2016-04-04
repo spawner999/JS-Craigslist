@@ -1,0 +1,30 @@
+{{#if isSelected}}
+<form {{action 'submitListing' on="submit"}}>
+
+  <label for="poster">Your Name: </label>
+  {{input value=poster }}
+
+  <label for="name">Title: </label>
+  {{input value=name }}
+
+  <label for="img">img URL </label>
+  {{input value=img }}
+
+  <label for="address">Location: </label>
+  {{input value=address }}
+
+  <label for="text">describe your listing: </label>
+  {{input value=text }}
+
+  <label for="contact">Contact Info: </label>
+  {{input value=contact }}
+
+  <button type="submit">Submit</button>
+
+</form>
+
+{{else}}
+
+<button {{action 'showForm'}} > new listing</button>
+
+{{/if}}
