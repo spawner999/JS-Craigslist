@@ -13,6 +13,16 @@ export default Ember.Route.extend({
       var newCity = this.store.createRecord('city', params);
       newCity.save();
       this.transitionTo('admin-panel');
+    },
+    saveCategory(params){
+      var newCategory = this.store.createRecord('category', params);
+      var cities = this.store.findAll('city');
+      newCategory.save().then(function(){
+        cities.map(function(city){
+        city.get('categories').addObject(newCategory);
+        return city.save();
+      });
+    });
     }
   }
 });

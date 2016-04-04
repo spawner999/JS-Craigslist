@@ -1,0 +1,9 @@
+{{#if isSelected}}
+  <form {{action 'submitCategory' on="submit"}}>
+    <label for="name">Name</label>
+    {{input value=name}}
+    <button type="submit" name="button">Submit</button>
+  </form>
+  {{else}}
+  <button type="button" {{action 'showForm'}}>New Category</button>
+{{/if}}

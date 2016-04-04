@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     },
     submitCity(){
       var params = {
-        name: this.get('name')? this.get('name'): 'name' + Math.floor(Math.random() * 10),
+        name: this.get('name')? this.get('name'): 'city' + Math.floor(Math.random() * 10),
         state: this.get('state')? this.get('state'): 'state' + Math.floor(Math.random() * 10)
       };
       this.set('isSelected', false);
