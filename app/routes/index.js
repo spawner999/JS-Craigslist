@@ -8,6 +8,8 @@ export default Ember.Route.extend({
     goToCity(id){
       if(id) {
         this.transitionTo('city', id);
+      } else {
+        alert("city not found, try another search");
       }
     }
 }

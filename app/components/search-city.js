@@ -7,7 +7,12 @@ export default Ember.Component.extend({
       var selectedCity = this.get('cities').filter(function(city){
         return city.get('name') === query;
       });
-      this.sendAction('goToCity', selectedCity[0].id)
+      console.log(selectedCity);
+      if (selectedCity.length > 0) {
+        this.sendAction('goToCity', selectedCity[0].id);
+      } else {
+        alert('not found. try another search');
+      }
     }
   }
 });
