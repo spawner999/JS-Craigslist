@@ -1,0 +1,11 @@
+{{#if isSelected}}
+ <form {{action 'submitCity' on="submit"}}>
+   <label for="name">City</label>
+   {{input value=name}}
+   <label for="state">State</label>
+   {{input value=state}}
+   <button type="submit" name="button">Submit</button>
+ </form>
+{{else}}
+  <button type="button"{{action 'showForm'}}>New city</button>
+  {{/if}}
