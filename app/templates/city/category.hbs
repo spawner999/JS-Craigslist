@@ -1,4 +1,4 @@
 
-<h1>{{model.category.name}} {{model.city.name}}</h1>
+<h2>{{model.category.name}}  in  {{model.city.name}}</h2>
 {{listing-list listings=model.listings city=model.city category=model.category}}
 {{new-listing sendListing="saveListing" city=model.city category=model.category}}

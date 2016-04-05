@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
+  model() {
     return Ember.RSVP.hash({
       cities: this.store.findAll('city'),
       categories: this.store.findAll('category')

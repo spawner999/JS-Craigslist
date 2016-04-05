@@ -1,5 +1,6 @@
-<h2>{{model.name}}</h2>
-<h3>{{model.state}}</h3>
-{{model.categories}}
+<hr>
+<h1>{{model.name}} - {{model.state}}</h1>
+<hr>
 {{category-list categories=model.categories city=model}}
+<hr>
 {{outlet city=model}}

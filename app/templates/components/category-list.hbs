@@ -1,4 +1,4 @@
-<h1>categories:{{categories.length}}</h1>
+<h2>categories:{{categories.length}}</h2>
   {{#each categories as |category|}}
-   {{#link-to 'city.category' category.id}}{{category.name}}{{/link-to}}
+   {{#link-to 'city.category' category.id}}{{category-detail category=category}}{{/link-to}}
   {{/each}}

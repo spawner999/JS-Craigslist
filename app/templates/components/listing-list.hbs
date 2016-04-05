@@ -1,4 +1,6 @@
-<h1>listings:{{categories.length}}</h1>
+<h3>listings:{{categories.length}}</h3>
   {{#each filteredList as |listing|}}
-   {{listing.name}}
+    {{#link-to 'listing' listing.id}}
+    {{listing-detail listing=listing}}
+   {{/link-to}}
   {{/each}}

@@ -1,1 +1,8 @@
-{{outlet}}
+<h1>{{model.name}}</h1>
+<h2>by: {{model.poster}}</h2>
+{{#link-to 'city.category' model.city.id model.category.id}}
+<h2>{{model.category.name}} in {{model.city.name}}, {{model.city.state}}</h2>
+{{/link-to}}
+<img src="{{model.img}}" alt="" />
+<h3>{{model.address}}</h3>
+<p>{{model.text}}</p>
