@@ -7,8 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('admin-panel');
-  this.route('city', {path: '/city/:city_id'});
-  this.route('listing');
+  this.route('city', {path: '/city/:city_id'}, function() {
+    this.route('category', {path: '/category/:category_id'});
+  });
+  // this.route('listing');
 });
 
 export default Router;

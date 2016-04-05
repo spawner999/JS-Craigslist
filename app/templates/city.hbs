@@ -1,1 +1,5 @@
-{{category-list categories=model.city.categories}}
+<h2>{{model.name}}</h2>
+<h3>{{model.state}}</h3>
+{{model.categories}}
+{{category-list categories=model.categories city=model}}
+{{outlet city=model}}

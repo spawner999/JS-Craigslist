@@ -11,7 +11,7 @@ export default Ember.Route.extend({
   actions: {
     saveCity(params){
       var newCity = this.store.createRecord('city', params);
-      newCity.save();
+      newCity.save().then();
       this.transitionTo('admin-panel');
     },
     saveCategory(params){
@@ -20,9 +20,11 @@ export default Ember.Route.extend({
       newCategory.save().then(function(){
         cities.map(function(city){
         city.get('categories').addObject(newCategory);
+        newCategory.get('cities').addObject(city);
+        newCategory.save();
         return city.save();
       });
     });
-    }
+  }
   }
 });

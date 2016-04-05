@@ -1,1 +1,4 @@
-{{yield}}
+<h1>listings:{{categories.length}}</h1>
+  {{#each filteredList as |listing|}}
+   {{listing.name}}
+  {{/each}}
